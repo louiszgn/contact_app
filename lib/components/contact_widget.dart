@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:contact_app/pages/contact_details.dart';
-import 'package:contact_app/components/user_avatar.dart';
+import 'package:contact_app/components/contact_avatar.dart';
 
 class ContactWidget extends StatelessWidget {
 
   final String name;
   final String number;
+  final String imageUrl;
 
-  ContactWidget({required this.name, required this.number});
+  ContactWidget({required this.name, required this.number, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class ContactWidget extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ContactDetails(name: name, number: number)),
+          MaterialPageRoute(builder: (context) => ContactDetails(name: name, number: number, imageUrl: imageUrl,)),
         );
       },
       child: Container(
@@ -31,7 +32,7 @@ class ContactWidget extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
           child: Row(
             children: [
-              UserAvatar(),
+              ContactAvatar(imageUrl: imageUrl),
 
               SizedBox(width: 10),
 

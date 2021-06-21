@@ -83,7 +83,7 @@ class HomePage extends StatelessWidget {
   List<Widget> buildContactWidget() {
     List<Widget> list = [];
     for (var i = 0; i < 10; i++) {
-      list.add(ContactWidget(name: "Arthur", number: "+33 23 45 56 78"));
+      list.add(ContactWidget(name: "Arthur", number: "+33 23 45 56 78", imageUrl: "assets/images/portrait1.jpeg",));
     }
     return list;
   }

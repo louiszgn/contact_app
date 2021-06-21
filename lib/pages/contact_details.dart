@@ -4,8 +4,9 @@ class ContactDetails extends StatelessWidget {
 
   final String name;
   final String number;
+  final String imageUrl;
 
-  ContactDetails({required this.name, required this.number});
+  ContactDetails({required this.name, required this.number, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,7 @@ class ContactDetails extends StatelessWidget {
         title: Text(
           name,
           style: TextStyle(
+            fontWeight: FontWeight.bold,
             color: Colors.grey[800],
           ),
         ),
@@ -41,7 +43,25 @@ class ContactDetails extends StatelessWidget {
           ),
         ],
       ),
-      body: Text(number),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(imageUrl),
+                fit: BoxFit.cover,
+              ),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(25),
+                bottomRight: Radius.circular(25),
+              ),
+            ),
+          ),
+
+          Text(number),
+        ],
+      ),
     );
   }
 }

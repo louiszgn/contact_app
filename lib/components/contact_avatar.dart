@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-class UserAvatar extends StatelessWidget {
+class ContactAvatar extends StatelessWidget {
+
+  final String imageUrl;
+
+  ContactAvatar({required this.imageUrl});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,7 +19,7 @@ class UserAvatar extends StatelessWidget {
           color: Colors.white,
         ),
         image: DecorationImage(
-          image: AssetImage("assets/images/portrait1.jpeg"),
+          image: AssetImage(imageUrl),
           fit: BoxFit.cover,
         ),
       ),
