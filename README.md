@@ -1,10 +1,25 @@
-# contact_app
+# Contact app
 
-A new Flutter project.
+Exercice de cours basé sur Flutter.
+
+## Consigne
+
+![Consigne](https://github.com/louiszgn/contact_app/blob/main/consigne.png)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Must be installed :
+
+- [Flutter](https://flutter.dev/docs/get-started/install)
+- [Visual Studio Code](https://code.visualstudio.com/) (or [Android Studio](https://developer.android.com/studio/install))
+
+
+Commands to use :
+
+- `git clone git@github.com:louiszgn/contact_app.git`
+- `flutter pub get`
+- `flutter devices`
+- `flutter run`
 
 A few resources to get you started if this is your first Flutter project:
 
