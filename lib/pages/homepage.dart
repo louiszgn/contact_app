@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:contact_app/pages/add_contact_page.dart'
 import 'package:contact_app/components/contact_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -77,6 +78,10 @@ class HomePage extends StatelessWidget {
           ]
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+      onPressed: () => MaterialPageRoute(builder: (context) => AddContactPage(),
+      child: Icon(Icons.add),
+    ),
     );
   }
 
