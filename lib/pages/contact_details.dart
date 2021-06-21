@@ -47,6 +47,7 @@ class ContactDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
+            height: MediaQuery.of(context).size.height / 2,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(imageUrl),
